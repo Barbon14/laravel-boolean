@@ -18,5 +18,8 @@ Route::middleware('auth')
         -> prefix('postcard')
         -> group(function() {
             Route::get('/create', 'PostcardController@create') ->name ('create');
-            Route::post('/store', 'PostcardController@store')->name('store');
+            Route::post('/store', 'PostcardController@store') -> name('store');
 });
+
+// api
+Route::get('/api/postcards/list', 'ApiController@getPostcardsList') -> name('api.postcards.list');

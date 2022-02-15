@@ -5,9 +5,11 @@
     @auth
 
         <h2>Ciao {{ Auth::user() -> name }}!</h2>
-        <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a>
+        <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a> <br>
 
         <a href="{{ route('postcard.create') }}">CREATE</a>
+
+        <postcard-list></postcard-list>
  
     @else
 
