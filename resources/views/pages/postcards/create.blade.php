@@ -4,7 +4,7 @@
 
     <form 
     enctype="multipart/form-data" 
-    action="" 
+    action="{{ route('postcard.store') }}" 
     method="POST">
 
         @method('POST')
